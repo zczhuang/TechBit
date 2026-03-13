@@ -1178,6 +1178,21 @@ ul { list-style: none; }
   flex: 1;
 }
 
+.setup__step-badge {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+  background: var(--cream-dark);
+  border: 1px solid var(--gray-light);
+  border-radius: 3px;
+  padding: 0.15em 0.55em;
+  margin-bottom: 0.4rem;
+}
+
 .setup__step-title {
   font-family: var(--font-serif);
   font-size: 1.25rem;
@@ -1253,6 +1268,7 @@ ul { list-style: none; }
 .setup__step:nth-child(2) { transition-delay: 0.12s; }
 .setup__step:nth-child(3) { transition-delay: 0.19s; }
 .setup__step:nth-child(4) { transition-delay: 0.26s; }
+.setup__step:nth-child(5) { transition-delay: 0.33s; }
 
 /* ── NAV ACTIVE STATE ─────────────────────────────────────────────────────── */
 .nav__link.active { color: var(--white); }
