@@ -1226,6 +1226,44 @@ ul { list-style: none; }
   border-color: var(--gold-light);
 }
 
+.setup__step-body code {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85em;
+  background: var(--cream-dark);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  color: var(--navy);
+}
+
+/* Deploy divider between setup groups */
+.setup__divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2.5rem 0 2rem;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.setup__divider::before,
+.setup__divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--gray-light);
+}
+
+.setup__divider-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+  white-space: nowrap;
+}
+
 @media (max-width: 480px) {
   .setup__step {
     gap: 1.25rem;
@@ -1269,6 +1307,10 @@ ul { list-style: none; }
 .setup__step:nth-child(3) { transition-delay: 0.19s; }
 .setup__step:nth-child(4) { transition-delay: 0.26s; }
 .setup__step:nth-child(5) { transition-delay: 0.33s; }
+.setup__step:nth-child(6) { transition-delay: 0.05s; }
+.setup__step:nth-child(7) { transition-delay: 0.12s; }
+.setup__step:nth-child(8) { transition-delay: 0.19s; }
+.setup__step:nth-child(9) { transition-delay: 0.26s; }
 
 /* ── NAV ACTIVE STATE ─────────────────────────────────────────────────────── */
 .nav__link.active { color: var(--white); }
