@@ -172,7 +172,7 @@
     }, observerOptions);
 
     // Observe cards and key blocks
-    document.querySelectorAll('.credential, .priority-card, .contact__way, .belmont-stat').forEach(el => {
+    document.querySelectorAll('.credential, .priority-card, .contact__way, .belmont-stat, .setup__step').forEach(el => {
       el.classList.add('observe');
       observer.observe(el);
     });

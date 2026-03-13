@@ -1098,6 +1098,135 @@ ul { list-style: none; }
   html { scroll-behavior: auto; }
 }
 
+/* ── SETUP / CLAUDE CODE ──────────────────────────────────────────────────── */
+.setup {
+  padding: var(--section-pad) var(--container-p);
+  background: var(--cream);
+}
+
+.setup__container {
+  max-width: var(--container-w);
+  margin: 0 auto;
+}
+
+.setup__header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 4rem;
+}
+
+.setup__intro {
+  margin-top: 1rem;
+  font-size: 1.0625rem;
+  color: var(--gray-mid);
+  line-height: 1.7;
+}
+
+.setup__intro strong {
+  color: var(--navy);
+}
+
+/* Steps list */
+.setup__steps {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.setup__step {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  position: relative;
+  padding-bottom: 2.5rem;
+}
+
+/* Vertical connector line between steps */
+.setup__step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 1.375rem; /* center of the 2.75rem circle */
+  top: 2.75rem;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gold), var(--cream-dark));
+}
+
+/* Number circle */
+.setup__step-num {
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--white);
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(27, 58, 107, 0.25);
+  position: relative;
+  z-index: 1;
+}
+
+.setup__step-content {
+  padding-top: 0.35rem;
+  flex: 1;
+}
+
+.setup__step-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+
+.setup__step-body {
+  color: var(--gray-mid);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.setup__step-body strong {
+  color: var(--charcoal);
+}
+
+.setup__step-link {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gold);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.setup__step-link:hover {
+  color: var(--gold-light);
+  border-color: var(--gold-light);
+}
+
+@media (max-width: 480px) {
+  .setup__step {
+    gap: 1.25rem;
+  }
+
+  .setup__step:not(:last-child)::after {
+    left: 1.125rem;
+  }
+
+  .setup__step-num {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1rem;
+  }
+}
+
 /* ── INTERSECTION OBSERVER ENTRANCE ANIMATIONS ────────────────────────────── */
 .observe {
   opacity: 0;
@@ -1120,6 +1249,10 @@ ul { list-style: none; }
 .belmont-stat:nth-child(1) { transition-delay: 0.05s; }
 .belmont-stat:nth-child(2) { transition-delay: 0.1s; }
 .belmont-stat:nth-child(3) { transition-delay: 0.15s; }
+.setup__step:nth-child(1) { transition-delay: 0.05s; }
+.setup__step:nth-child(2) { transition-delay: 0.12s; }
+.setup__step:nth-child(3) { transition-delay: 0.19s; }
+.setup__step:nth-child(4) { transition-delay: 0.26s; }
 
 /* ── NAV ACTIVE STATE ─────────────────────────────────────────────────────── */
 .nav__link.active { color: var(--white); }
